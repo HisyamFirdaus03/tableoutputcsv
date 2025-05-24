@@ -11,9 +11,10 @@ async function readCSV(){
 }
 
 function extractCSV(data){
+    console.log(data);
     let formattedData = data.split('\n');
     let dataObject = {};
-
+    console.log(formattedData);
     for(let i = 1; i < formattedData.length; i++){
         let part = formattedData[i].split(',');
         dataObject[part[0]] = parseInt(part[1].indexOf('\r') == -1 ? part[1] : part[1].split('\r')[0]);

@@ -1,6 +1,6 @@
 
 async function readCSV(){
-    const response = await fetch("Table_input.csv");
+    const response = await fetch("Table_Input.csv");
     const data = await response.text();
 
     let dataObject = extractCSV(data);
